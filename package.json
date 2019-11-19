@@ -1,0 +1,22 @@
+{
+  "name": "codeceptjs-gherkin-boilerplate",
+  "version": "1.0.0",
+  "description": "boilerplate project gherkin codeceptjs resemble hook multi reporting",
+  "scripts": {
+    "test:testcafe": "npx codeceptjs -c codecept-testcafe.conf.js run --reporter mocha-multi",
+    "test:puppeteer": "npx codeceptjs -c codecept-puppeteer.conf.js run --reporter mocha-multi",
+    "test:resemblehook": "npx codeceptjs -c codecept-puppeteer.conf.js run --reporter mocha-multi -o '{\"hooks\": [\"./support/resemble_hook.js\"]}'"
+  },
+  "keywords": [],
+  "author": "Joost van Dieten",
+  "license": "ISC",
+  "devDependencies": {
+    "codeceptjs": "^2.3.5",
+    "codeceptjs-resemblehelper": "^1.8.0",
+    "mocha-junit-reporter": "^1.23.1",
+    "mocha-multi": "^1.1.3",
+    "mochawesome": "^4.1.0",
+    "puppeteer": "^2.0.0",
+    "testcafe": "^1.6.1"
+  }
+}
